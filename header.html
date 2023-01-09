@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>CSS3 Loading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		@-webkit-keyframes move {
+			0% { 
+				background-position: 0 0, 0 0, 0 0, 0 0, 0 0, left bottom, left top;
+			}		
+			100% { 
+				background-position: 80% 50%, 90% 10%, 10% 90%, 40% top, 45% 10%, left bottom, left top;
+			}
+		}
+		
+		@-moz-keyframes move {
+			0% { 
+				background-position: 0 0, 0 0, 0 0, 0 0, 0 0, left bottom, left top;
+			}		
+			100% { 
+				background-position: 80% 50%, 90% 10%, 10% 90%, 40% top, 45% 10%, left bottom, left top;
+			}
+		}
+		
+		@keyframes move {
+			0% { 
+				background-position: 0 0, 0 0, 0 0, 0 0, 0 0, left bottom, left top;
+			}		
+			100% { 
+				background-position: 80% 50%, 90% 10%, 10% 90%, 40% top, 45% 10%, left bottom, left top;
+			}
+		}
+		
+		header#main {
+			width: 100%;
+			height: 250px;		
+			overflow: hidden;
+			position: relative;
+			background-image: url('Rock.png'), url('Tree Short.png'), url('Tree Short.png'), url('Tree Tall.png'), url('Tree Tall.png'), url('Grass Block.png'), url('Sky.png');
+			background-position: 80% 50%, 90% 10%, 10% 90%, 40% top, 45% 10%, left bottom, left top;
+			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-x;			
+					
+			-webkit-animation: move 3s ease 1;
+			-moz-animation: move 3s ease 1;
+			animation: move 3s ease 1;
+		}
+		
+		header#main h1 {
+			color: #ffffff;
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0px;
+		}
+		
+		header#main img.character1{
+			position: absolute;
+			left: 110%;
+			top: 50%;
+			-webkit-transition: left 0.5s ease-in-out;
+			-moz-transition: left 0.5s ease-in-out;
+			-o-transition: left 0.5s ease-in-out;
+			transition: left 0.5s ease-in-out;			
+		}
+		
+		header#main img.character2{
+			position: absolute;
+			left: 10%;
+			top: 100%;
+			-webkit-transition: top 1.5s ease-in-out;
+			-moz-transition: top 1.5s ease-in-out;
+			-o-transition: top 1.5s ease-in-out;
+			transition: top 1.5s ease-in-out;			
+		}
+		
+		header#main:hover img.character1{				
+			left: 90%;
+		}	
+		
+		header#main:hover img.character2{				
+			top: 50%;
+		}	
+		
+	</style>	
+</head>
+<body>
+    <div id="page">		
+		<header id="main" class="animation">
+			<h1>LARGE SITE NAME</h1>
+			<img class="character1" src="Character Pink Girl.png">
+			<img class="character2" src="Character Cat Girl.png">
+		</header>
+    </div>   	
+</body>
+</html>
